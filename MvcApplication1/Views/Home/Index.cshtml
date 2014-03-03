@@ -1,0 +1,9 @@
+﻿<!DOCTYPE html>
+@{
+    ViewBag.Context = "Главная";
+    Layout = "~/Views/Shared/MainView.cshtml";
+}
+
+<h1 class="header">Let's go!</h1>
+<div id="main"><p>@ViewData["greating"], We're going to have an exciting party!</p></div>
+<a id="submit" href="@Url.Action("RSVPForm", "Home")">Join</a>

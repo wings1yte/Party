@@ -1,0 +1,15 @@
+﻿@model MvcApplication1.Models.GuestResponse
+@{
+    Layout = null;
+    ViewBag.Context = "Спасибо";
+}
+
+
+<h1>Thank you, @Html.Encode(Model.Name)!</h1>
+@if (Model.WillAttend == true)
+{ 
+    <p>It's great, that you're comming!</p>
+} else
+{
+    <p>Sorrry.</p>
+}

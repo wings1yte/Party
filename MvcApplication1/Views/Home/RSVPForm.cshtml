@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Форма для Херни";
+    AjaxOptions ajaxOpts = new AjaxOptions
+    {
+        UpdateTargetId = "home"
+    };
+}
+
+<h1 class="header">RSVP</h1>
+<div id="error">@Html.ValidationSummary() </div>
+
+@using (Ajax.BeginForm("RSVPForm", "Home", ajaxOpts))
+{ <center>
+    <table id="confirm">
+        <tr>
+            <td>Your Name:</td>
+            <td>@Html.TextBox("Name")</td>
+        </tr>
+        <tr>
+            <td>Your Email:</td>
+            <td>@Html.TextBox("Email")</td>
+        </tr>
+        <tr>
+            <td>Your Phone:</td>
+            <td>@Html.TextBox("Phone")</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center>Will you attend?
+        @Html.DropDownList("Willattend", new[]
+        {
+            new SelectListItem { Text = "Yes, I'll be there", Value = bool.TrueString},
+            new SelectListItem {Text = "No, I can't come", Value = bool.FalseString}
+        }, "Chose an option")</center>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <center><input type="submit" value="Submit" /></center>
+            </td>
+        </tr>
+    </table>
+    </center>
+}

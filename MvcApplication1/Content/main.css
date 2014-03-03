@@ -1,0 +1,54 @@
+html {
+  background: white;
+}
+#submit {
+  font-weight: bold;
+  background: #f6a627;
+  display: block;
+  padding: 4px;
+  border-radius: 5px;
+  width: 70px;
+  margin: 5px auto;
+  text-decoration: none;
+  border: solid 1px #808080;
+  color: #7A7669;
+}
+#submit :hover {
+  background: #edb660;
+}
+#home {
+  text-align: center;
+  padding: 0;
+}
+#main {
+  margin: 30px auto;
+  width: 450px;
+  padding: 10px;
+  border-radius: 4px;
+  background: #0fc1cc;
+  color: #fff;
+  font-family: 'Nirmala UI';
+  border: solid 5px #BBE8EB;
+}
+#error {
+  margin: auto;
+  width: 292px;
+  text-align: left;
+}
+.site-title {
+  text-align: center;
+  margin-top: 25px;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: #979797;
+  background: #030303;
+}
+footer h3 {
+  padding: 10px;
+  text-align: center;
+  color: inherit;
+}
